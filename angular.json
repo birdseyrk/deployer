@@ -23,7 +23,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "config_files"
+              "src/config_files"
             ],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
