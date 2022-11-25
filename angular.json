@@ -23,7 +23,10 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/config_files"
+              "src/config_files",
+              "src/config_files/hosts.json",
+              "src/config_files/inventory.txt",
+              "src/config_files/tomcat-users.xml"
             ],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
