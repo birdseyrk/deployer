@@ -26,7 +26,11 @@
               "src/config_files",
               "src/config_files/hosts.json",
               "src/config_files/inventory.txt",
-              "src/config_files/tomcat-users.xml"
+              "src/config_files/tomcat-users.xml",
+              "src/script_files",
+              "src/script_files/ping.sh",
+              "src/script_files/shutdown.sh",
+              "src/script_files/uptime.sh"
             ],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
