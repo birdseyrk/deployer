@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 //import { Host } from '../hosts.model';
 import { Host } from './host.model';
+import { ChildActivationEnd } from '@angular/router';
+import * as child from 'child_process';
 
+//const { spawn } = require('child_process');
 //const shell = require('shelljs')
 
 @Component({
@@ -14,7 +17,6 @@ import { Host } from './host.model';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent  implements OnInit {
-
   hosts: Host[] = [
     new Host('ubunt1', '192.168.1.101'),
     new Host('ubunt2', '192.168.1.102'),
@@ -27,6 +29,13 @@ export class ServersComponent  implements OnInit {
   }
 
   onPingServers() {
+    var myPing: child.ChildProcess = child.exec('../script_files/ping.sh');
+
+    //child.ChildProcess = child.exec('../script_files/ping.sh', (error: string, stdout: string, stderr: string) => {
+    //  console.log(stdout);      
+    //});
+
+
     console.log("Ping Servers");
   }
 
