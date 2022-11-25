@@ -1,10 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+//import { Host } from '../hosts.model';
+import { Host } from './host.model';
+
 
 @Component({
+  // selector: 'app-servers',    use <app-servers></app-servers> - preferred for components
+  // selector: '[app-servers]',  use <div app-servers><div>
+  // selector: '.app-servers',   use <div class="app-servers"
   selector: 'app-servers',
   templateUrl: './servers.component.html',
   styleUrls: ['./servers.component.css']
 })
-export class ServersComponent {
+export class ServersComponent  implements OnInit {
+
+  
+  
+  hosts: Host[] = [
+    new Host('ubunt1', '192.168.1.101'),
+    new Host('ubunt2', '192.168.1.102'),
+    new Host('ubunt3', '192.168.1.103')
+  ];
+  constructor() { }
+
+  ngOnInit() {
+
+  }
 
 }
