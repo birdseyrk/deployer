@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 //import { Host } from '../hosts.model';
 import { Host } from './host.model';
 
+//const shell = require('shelljs')
 
 @Component({
   // selector: 'app-servers',    use <app-servers></app-servers> - preferred for components
@@ -14,8 +15,6 @@ import { Host } from './host.model';
 })
 export class ServersComponent  implements OnInit {
 
-  
-  
   hosts: Host[] = [
     new Host('ubunt1', '192.168.1.101'),
     new Host('ubunt2', '192.168.1.102'),
@@ -25,6 +24,10 @@ export class ServersComponent  implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  onPingServers() {
+    console.log("Ping Servers");
   }
 
 }
