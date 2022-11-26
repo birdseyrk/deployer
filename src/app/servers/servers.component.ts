@@ -5,7 +5,7 @@ import { Host } from './host.model';
 import { ChildActivationEnd } from '@angular/router';
 import * as child from 'child_process';
 
-//const { spawn } = require('child_process');
+const { spawn } = require('child_process');
 //const shell = require('shelljs')
 
 @Component({
@@ -29,11 +29,10 @@ export class ServersComponent  implements OnInit {
   }
 
   onPingServers() {
-    var myPing: child.ChildProcess = child.exec('../script_files/ping.sh');
+    //var myPing: child.ChildProcess = child.exec('../script_files/ping.sh');
 
-    //child.ChildProcess = child.exec('../script_files/ping.sh', (error: string, stdout: string, stderr: string) => {
-    //  console.log(stdout);      
-    //});
+    var spawn = require('child_process').spawn;
+    var child = spawn('pwd');
 
 
     console.log("Ping Servers");
