@@ -22,7 +22,8 @@ export class ServersComponent  implements OnInit {
     new Host('ubunt2', '192.168.1.102'),
     new Host('ubunt3', '192.168.1.103'),
     new Host('ubunt4', '192.168.1.104'),
-    new Host('ubunt5', '192.168.1.105')
+    new Host('ubunt5', '192.168.1.105'),
+    new Host('ubunt6', '192.168.1.106')
   ];
   constructor() { }
 
