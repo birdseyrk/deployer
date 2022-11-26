@@ -5,7 +5,7 @@ import { Host } from './host.model';
 import { ChildActivationEnd } from '@angular/router';
 import * as child from 'child_process';
 
-const { spawn } = require('child_process');
+//const { spawn } = require('child_process');
 //const shell = require('shelljs')
 
 @Component({
@@ -20,7 +20,8 @@ export class ServersComponent  implements OnInit {
   hosts: Host[] = [
     new Host('ubunt1', '192.168.1.101'),
     new Host('ubunt2', '192.168.1.102'),
-    new Host('ubunt3', '192.168.1.103')
+    new Host('ubunt3', '192.168.1.103'),
+    new Host('ubunt3', '192.168.1.104')
   ];
   constructor() { }
 
