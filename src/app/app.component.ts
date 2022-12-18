@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+//import { ConsoleReporter } from 'jasmine';
+
+import { Injectable } from '@angular/core';
+
+import { ServerService } from './servers/servers.Service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +11,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'deployer';
+  constructor(
+    private serverService: ServerService
+    ) { }
+
+  ngOnInit() {
+    console.log('******** AppComponent ********');
+    this.serverService.getStatus();
+    this.serverService.setLastStatusUpdate();
+    this.serverService.startStatusTimer();
+  }
 }
