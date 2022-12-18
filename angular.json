@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "primeng": {
+    "deployer": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/primeng",
+            "outputPath": "dist/deployer",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -22,15 +22,21 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/config_files",
+              "src/config_files/hosts.json",
+              "src/config_files/inventory.txt",
+              "src/config_files/tomcat-users.xml",
+              "src/script_files",
+              "src/script_files/ping.sh",
+              "src/script_files/shutdown.sh",
+              "src/script_files/uptime.sh"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./node_modules/primeng/resources/primeng.css",
-              "./node_modules/primeicons//primeicons.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["./node_modules/bootstrap/dist/js/bootstrap.min.js"]
           },
           "configurations": {
             "production": {
@@ -63,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "primeng:build:production"
+              "browserTarget": "deployer:build:production"
             },
             "development": {
-              "browserTarget": "primeng:build:development"
+              "browserTarget": "deployer:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "primeng:build"
+            "browserTarget": "deployer:build"
           }
         },
         "test": {

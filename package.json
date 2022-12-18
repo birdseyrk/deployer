@@ -1,5 +1,5 @@
 {
-  "name": "primeng",
+  "name": "deployer",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -18,11 +18,9 @@
     "@angular/platform-browser": "^15.0.0",
     "@angular/platform-browser-dynamic": "^15.0.0",
     "@angular/router": "^15.0.0",
-    "bootstrap": "^3.4.1",
-    "primeicons": "^6.0.1",
-    "primeng": "^15.0.0-rc.1",
-    "rxjs": "^7.6.0",
-    "rxjs-compat": "^6.6.7",
+    "@types/watch": "^1.0.3",
+    "bootstrap": "^5.2.3",
+    "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
   },
@@ -38,5 +36,8 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~4.8.2"
-  }
+  },
+  "browser":{
+    "child_process": false
+  }  
 }
